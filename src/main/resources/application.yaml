@@ -1,3 +1,10 @@
 spring:
-  application:
-    name: catalogo-de-produtos
+  datasource:
+    url: jdbc:mysql://localhost:3307/catalogo_produtos?allowPublicKeyRetrieval=true&useSSL=false
+    username: seuUsuario
+    password: suaSenha
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
