@@ -3,6 +3,8 @@ package com.lucasprog.catalogo_de_produtos.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "categorias")
 @Getter
