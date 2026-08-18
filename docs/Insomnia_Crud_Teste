@@ -1,0 +1,165 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Catalogo de Produtos
+meta:
+  id: wrk_978a453241514c62903800c952c9b274
+  created: 1786888219331
+  modified: 1786982054863
+  description: ""
+collection:
+  - url: http://localhost:8080/api/v1/health
+    name: Health Check
+    meta:
+      id: req_a85e716ac43b4b75b767c38eb0708159
+      created: 1786888220023
+      modified: 1787083370038
+      isPrivate: false
+      description: ""
+      sortKey: -1786888220023
+    method: GET
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/produtos
+    name: Criando Produto
+    meta:
+      id: req_4fc243312ce74b02b5935f3efcbf15d9
+      created: 1787082449443
+      modified: 1787082829753
+      isPrivate: false
+      description: ""
+      sortKey: -1787082449443
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Monitor Gamer",
+          "descricao": "Monitor 144hz 24 polegadas",
+          "preco": 1250.50,
+          "categoriaId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/produtos
+    name: Listar Todos
+    meta:
+      id: req_8b42280a1dc548ca962eaa51d037e11e
+      created: 1787083113418
+      modified: 1787083152489
+      isPrivate: false
+      description: ""
+      sortKey: -1787083113418
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/produtos/2
+    name: Buscar por ID
+    meta:
+      id: req_4b2bfab9df9946dd84207edff15162dc
+      created: 1787083163328
+      modified: 1787083356320
+      isPrivate: false
+      description: ""
+      sortKey: -1787083163328
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/produtos/2
+    name: Atualizar Produto
+    meta:
+      id: req_757f78659b98407cb98e2f2e71b47be3
+      created: 1787083216753
+      modified: 1787083366420
+      isPrivate: false
+      description: ""
+      sortKey: -1787083216753
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Monitor Gamer Curvo",
+          "descricao": "Monitor 144hz 24 polegadas Curvo",
+          "preco": 1300.00,
+          "categoriaId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/produtos/1
+    name: Deletar Produto
+    meta:
+      id: req_aea0ea72b52440f2a0b4b02b27d9e585
+      created: 1787083287358
+      modified: 1787083336330
+      isPrivate: false
+      description: ""
+      sortKey: -1787083287358
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d4c75ff97d48530e7f52e65d0e08bf5a6197665f
+    created: 1786888219335
+    modified: 1786891573673
+  cookies:
+    - id: 2cad3fb8-e6b9-40d1-8ba7-19e671c96034
+      key: JSESSIONID
+      value: CA1DD38CBFBA5CE0576724DEA3E570FA
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_d4c75ff97d48530e7f52e65d0e08bf5a6197665f
+    created: 1786888219333
+    modified: 1786888219333
+    isPrivate: false
